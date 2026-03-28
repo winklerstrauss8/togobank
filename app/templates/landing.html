@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TogoBank Digital — Votre banque 100% numérique au Togo. Gérez vos comptes, virements et recharges Mixx By Yas & Flooz en toute sécurité.">
+    <title>TogoBank Digital — Banque en ligne moderne au Togo</title>
+    <link rel="stylesheet" href="/static/css/variables.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/animations.css">
+    <link rel="stylesheet" href="/static/css/components.css">
+    <link rel="stylesheet" href="/static/css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="landing-page">
+    <!-- Navigation -->
+    <nav class="landing-nav" id="landingNav">
+        <div class="landing-logo">
+            <div class="landing-logo-icon">TB</div>
+            <div class="landing-logo-text">Togo<span>Bank</span></div>
+        </div>
+        <div class="landing-nav-links">
+            <a href="#features">Fonctionnalités</a>
+            <a href="#mobile-money">Mobile Money</a>
+            <a href="#security">Sécurité</a>
+            <button class="theme-toggle" id="themeToggleLanding" title="Changer de thème">
+                <i class="fas fa-moon"></i>
+            </button>
+            <a href="/app#login" class="btn btn-secondary btn-sm">Connexion</a>
+            <a href="/app#register" class="btn btn-primary btn-sm">Ouvrir un compte</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-grid">
+            <div class="hero-content animate-fade-in-up">
+                <div class="hero-tag">
+                    <i class="fas fa-shield-halved"></i>
+                    Banque 100% numérique & sécurisée
+                </div>
+                <h1>
+                    La banque du<br>
+                    <span class="gradient-text">Togo moderne</span>
+                </h1>
+                <p class="hero-description">
+                    Gérez vos finances en toute simplicité. Virements instantanés, recharges
+                    <strong>Mixx By Yas</strong> et <strong>Flooz</strong>, carte bancaire virtuelle — le tout
+                    depuis votre navigateur.
+                </p>
+                <div class="hero-buttons">
+                    <a href="/app#register" class="btn btn-primary btn-lg">
+                        <i class="fas fa-rocket"></i>
+                        Ouvrir un compte gratuit
+                    </a>
+                    <a href="#features" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-play-circle"></i>
+                        Découvrir
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual animate-fade-in-right delay-3">
+                <div class="hero-card-preview">
+                    <div class="hero-card-chip"></div>
+                    <div class="hero-card-number">4532 •••• •••• 7890</div>
+                    <div class="hero-card-footer">
+                        <div>
+                            <div style="font-size:0.65rem;opacity:0.7;margin-bottom:2px">TITULAIRE</div>
+                            <div class="hero-card-name">AMA KOFFI</div>
+                        </div>
+                        <div>
+                            <div style="font-size:0.65rem;opacity:0.7;margin-bottom:2px">EXPIRE</div>
+                            <div class="hero-card-exp">03/29</div>
+                        </div>
+                        <div class="hero-card-brand">TB</div>
+                    </div>
+                </div>
+                <div class="hero-floating-stat stat-1 animate-fade-in delay-5">
+                    <div style="display:flex;align-items:center;gap:8px">
+                        <div style="color:var(--success);font-size:1.2rem"><i class="fas fa-arrow-trend-up"></i></div>
+                        <div>
+                            <div style="font-weight:700;font-size:0.85rem">+250 000 FCFA</div>
+                            <div style="font-size:0.7rem;color:var(--text-tertiary)">Reçu aujourd'hui</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-floating-stat stat-2 animate-fade-in delay-6">
+                    <div style="display:flex;align-items:center;gap:8px">
+                        <div style="color:var(--accent-blue);font-size:1.2rem"><i class="fas fa-shield-check"></i></div>
+                        <div>
+                            <div style="font-weight:700;font-size:0.85rem">Transactions</div>
+                            <div style="font-size:0.7rem;color:var(--success)">✓ Sécurisées</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section" id="features">
+        <div class="section-header">
+            <div class="section-tag">Fonctionnalités</div>
+            <h2 class="section-title">Tout ce dont vous avez besoin</h2>
+            <p class="section-desc">Une plateforme bancaire complète conçue pour le Togo</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon blue"><i class="fas fa-wallet"></i></div>
+                <h3>Comptes multiples</h3>
+                <p>Créez des comptes courant, épargne ou professionnel. Gérez vos finances en un clic.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon green"><i class="fas fa-paper-plane"></i></div>
+                <h3>Virements instantanés</h3>
+                <p>Envoyez de l'argent en temps réel vers n'importe quel compte TogoBank ou banque externe.</p>
+            </div>
+            <div class="feature-card" id="mobile-money">
+                <div class="feature-icon gold"><i class="fas fa-mobile-screen-button"></i></div>
+                <h3>Mixx By Yas & Flooz</h3>
+                <p>Rechargez votre compte directement depuis Moov Money ou Flooz/T-Money.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon purple"><i class="fas fa-credit-card"></i></div>
+                <h3>Carte virtuelle</h3>
+                <p>Obtenez une carte bancaire virtuelle pour vos achats en ligne, blocable à tout moment.</p>
+            </div>
+            <div class="feature-card" id="security">
+                <div class="feature-icon red"><i class="fas fa-lock"></i></div>
+                <h3>Sécurité maximale</h3>
+                <p>Chiffrement AES-256, authentification 2FA, détection de fraude en temps réel.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon cyan"><i class="fas fa-piggy-bank"></i></div>
+                <h3>Épargne & objectifs</h3>
+                <p>Définissez des objectifs d'épargne avec suivi automatique et virements programmés.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Prêt à gérer votre argent autrement ?</h2>
+        <p>Rejoignez des milliers de Togolais qui font confiance à TogoBank Digital.</p>
+        <div style="display:flex;gap:var(--space-4);justify-content:center">
+            <a href="/app#register" class="btn btn-gold btn-lg">
+                <i class="fas fa-user-plus"></i>
+                Créer mon compte
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="landing-footer">
+        <div class="footer-grid">
+            <div>
+                <div class="landing-logo" style="margin-bottom:var(--space-3)">
+                    <div class="landing-logo-icon">TB</div>
+                    <div class="landing-logo-text" style="color:white">Togo<span>Bank</span></div>
+                </div>
+                <p class="footer-brand-text">Votre banque 100% numérique au Togo. Accessible partout, à tout moment.</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Produits</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Compte courant</a></li>
+                    <li><a href="#">Compte épargne</a></li>
+                    <li><a href="#">Carte virtuelle</a></li>
+                    <li><a href="#">Virements</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Mixx By Yas</a></li>
+                    <li><a href="#">Flooz</a></li>
+                    <li><a href="#">API Entreprises</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">Légal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">CGU</a></li>
+                    <li><a href="#">Confidentialité</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">BCEAO</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 TogoBank Digital. Tous droits réservés. Agréé par la BCEAO.
+        </div>
+    </footer>
+
+    <script>
+        // Nav scroll effect
+        window.addEventListener('scroll', () => {
+            document.getElementById('landingNav').classList.toggle('scrolled', window.scrollY > 50);
+        });
+        // Theme toggle
+        const savedTheme = localStorage.getItem('togobank-theme') || 'light';
+        if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        document.getElementById('themeToggleLanding')?.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            localStorage.setItem('togobank-theme', isDark ? 'light' : 'dark');
+            const icon = document.querySelector('#themeToggleLanding i');
+            icon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TogoBank Digital — Espace client">
+    <title>TogoBank Digital — Espace Client</title>
+    <link rel="stylesheet" href="/static/css/variables.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/animations.css">
+    <link rel="stylesheet" href="/static/css/components.css">
+    <link rel="stylesheet" href="/static/css/layout.css">
+    <link rel="stylesheet" href="/static/css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <!-- AUTH PAGES (login/register) -->
+    <div id="authView" style="display:none">
+        <div class="auth-page">
+            <div class="auth-container">
+                <div style="text-align:center;margin-bottom:var(--space-6)">
+                    <a href="/" style="display:inline-flex;align-items:center;gap:var(--space-3);text-decoration:none">
+                        <div class="landing-logo-icon">TB</div>
+                        <div class="landing-logo-text">Togo<span>Bank</span></div>
+                    </a>
+                </div>
+                <div class="auth-card animate-scale-in" id="authCard">
+                    <!-- Dynamically filled by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- APP SHELL -->
+    <div id="appView" style="display:none" class="app-layout">
+        <!-- Sidebar overlay mobile -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">TB</div>
+                <div class="sidebar-brand">Togo<span>Bank</span></div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">Principal</div>
+                <a class="nav-item active" data-page="dashboard" href="#dashboard">
+                    <i class="fas fa-chart-pie"></i> Tableau de bord
+                </a>
+                <a class="nav-item" data-page="accounts" href="#accounts">
+                    <i class="fas fa-wallet"></i> Mes Comptes
+                </a>
+                <a class="nav-item" data-page="transactions" href="#transactions">
+                    <i class="fas fa-exchange-alt"></i> Transactions
+                </a>
+                <a class="nav-item" data-page="transfer" href="#transfer">
+                    <i class="fas fa-paper-plane"></i> Virement
+                </a>
+                <a class="nav-item" data-page="topup" href="#topup">
+                    <i class="fas fa-mobile-screen-button"></i> Recharge Mobile
+                </a>
+                <div class="nav-section-title">Services</div>
+                <a class="nav-item" data-page="card" href="#card">
+                    <i class="fas fa-credit-card"></i> Ma Carte
+                </a>
+                <a class="nav-item" data-page="beneficiaries" href="#beneficiaries">
+                    <i class="fas fa-users"></i> Bénéficiaires
+                </a>
+                <a class="nav-item" data-page="savings" href="#savings">
+                    <i class="fas fa-piggy-bank"></i> Épargne
+                </a>
+                <a class="nav-item" data-page="notifications" href="#notifications">
+                    <i class="fas fa-bell"></i> Notifications
+                    <span class="nav-badge" id="notifBadge" style="display:none">0</span>
+                </a>
+                <div class="nav-section-title">Compte</div>
+                <a class="nav-item" data-page="profile" href="#profile">
+                    <i class="fas fa-user-circle"></i> Profil
+                </a>
+                <a class="nav-item" data-page="security" href="#security">
+                    <i class="fas fa-shield-halved"></i> Sécurité
+                </a>
+                <div id="adminNavSection" style="display:none">
+                    <div class="nav-section-title">Administration</div>
+                    <a class="nav-item" data-page="admin" href="#admin">
+                        <i class="fas fa-cog"></i> Admin Panel
+                    </a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="sidebar-user" id="sidebarUser">
+                    <div class="avatar" id="sidebarAvatar">AK</div>
+                    <div class="sidebar-user-info">
+                        <div class="sidebar-user-name" id="sidebarUserName">Ama Koffi</div>
+                        <div class="sidebar-user-role" id="sidebarUserRole">Client</div>
+                    </div>
+                    <i class="fas fa-sign-out-alt" style="opacity:0.5;cursor:pointer" id="logoutBtn" title="Déconnexion"></i>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <header class="page-header">
+                <div style="display:flex;align-items:center;gap:var(--space-3)">
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="page-title-section">
+                        <h1 class="page-title" id="pageTitle">Tableau de bord</h1>
+                        <p class="page-subtitle" id="pageSubtitle">Bienvenue, Ama</p>
+                    </div>
+                </div>
+                <div class="page-actions">
+                    <button class="theme-toggle" id="themeToggle" title="Changer de thème">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </header>
+            <div class="page-body" id="pageContent">
+                <!-- Pages rendues dynamiquement ici -->
+            </div>
+        </main>
+
+        <!-- Bottom nav mobile -->
+        <nav class="bottom-nav">
+            <div class="bottom-nav-items">
+                <a class="bottom-nav-item active" data-page="dashboard" href="#dashboard">
+                    <i class="fas fa-chart-pie"></i> Accueil
+                </a>
+                <a class="bottom-nav-item" data-page="accounts" href="#accounts">
+                    <i class="fas fa-wallet"></i> Comptes
+                </a>
+                <a class="bottom-nav-item" data-page="transfer" href="#transfer">
+                    <i class="fas fa-paper-plane"></i> Virer
+                </a>
+                <a class="bottom-nav-item" data-page="topup" href="#topup">
+                    <i class="fas fa-mobile-screen-button"></i> Recharger
+                </a>
+                <a class="bottom-nav-item" data-page="notifications" href="#notifications">
+                    <i class="fas fa-bell"></i> Alertes
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Toast container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Modal container -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modalContent"></div>
+    </div>
+
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
