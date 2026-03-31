@@ -16,19 +16,4 @@ TogoBank est une application bancaire moderne conçue pour offrir une expérienc
 - **Frontend** : HTML5, CSS3, JavaScript
 - **Base de données** : PostgreSQL
 - **Design** : Architecture moderne et responsive
-
-##  Installation
-
-1. Clonez le dépôt :
-   ```bash
-   git clone https://github.com/winklerstrauss8/togobank.git
-   ```
-2. Installez les dépendances :
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Configurez les variables d'environnement dans un fichier `.env`.
-4. Lancez l'application :
-   ```bash
-   python run.py
    
