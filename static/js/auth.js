@@ -105,7 +105,7 @@ const Auth = {
                 <div id="step3" style="display:none">
                     <div class="form-group">
                         <label class="form-label">Mot de passe</label>
-                        <input type="password" class="form-input" id="regPassword" placeholder="Min. 8 caractères" required>
+                        <input type="password" class="form-inPput" id="regPassword" placeholder="Min. 8 caractères" required>
                         <div class="password-strength" id="pwdStrength">
                             <div class="password-bar"></div><div class="password-bar"></div>
                             <div class="password-bar"></div><div class="password-bar"></div>
